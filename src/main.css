@@ -99,31 +99,47 @@
 .invitees-wrapper {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+   
+
 }
 .card {
     border: 1px solid darkgray;
     box-shadow: 2px 2px 5px darkgray;
-    width: 23%;
-    height: 23%;
+    width: 200px;
+    height: 100px;
     padding: 25px;
     border-radius: 5px;
     text-align: center;
-    margin-bottom: 100px;
+    margin: 20px;
+    color: rgb(70, 70, 70);
+    background-color: rgb(252, 252, 252);
 }
 .name-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
 }
 .invitee-name {
-    margin: 0;
+    color: rgb(17, 105, 146);
+    margin: 0; 
 }
 .edit-button {
     border: none;
-    font-size: 12px;
+    font-size: 14px;
     color: darkgray;
 }
 .response {
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
     
 }
+.response input {
+    margin-top: 22px;
+}
+.response label {
+    margin-top: 20px;
+}
+

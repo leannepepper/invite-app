@@ -7,16 +7,62 @@ import AddPerson from './AddPerson';
 import Invitees from './Invitees'; 
 
 class App extends Component {
+  state = {
+    invitees: [
+      {
+        name: "Travis Smith",
+        id: 1
+      },
+      {
+        name: "Rachel Cobb",
+        id: 2
+      },
+      {
+        name: "Lauren Jackson",
+        id: 3
+      },
+      {
+        name: "Anthony Lara",
+        id: 4
+      },
+      {
+        name: "Wayne Newton",
+        id: 5
+      }
+    ]
+  }
+
+  prevInviteeId = 5;
+
+  handleAddPerson = (name) => {
+    this.setState({
+      invitees: [
+        {
+          name: name, 
+          id: this.prevInviteeId += 1
+        },
+        ...this.state.invitees
+      ]
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <div className="jumbotron">
           <Header/>
           <h1 className="app-name"><span>Instant</span> Invite</h1>
-          <AddPerson />
+          <AddPerson addPerson={this.handleAddPerson} />
           </div>
          <FilterLists />
-         <Invitees />
+         <div className="invitees-wrapper">
+          {this.state.invitees.map( invitee =>
+            <Invitees 
+            name={invitee.name}
+            id={invitee.id}
+          />
+          )}
+        </div>
       </div>
     );
   }
