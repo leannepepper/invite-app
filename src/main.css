@@ -124,10 +124,11 @@
     color: rgb(17, 105, 146);
     margin: 0; 
 }
-.edit-button {
+.card-button {
     border: none;
     font-size: 14px;
     color: darkgray;
+    background-color: transparent;
 }
 .response {
     display: flex;

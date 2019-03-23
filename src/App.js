@@ -46,6 +46,14 @@ class App extends Component {
     })
   }
 
+  handleRemovePerson = (id) => {
+    this.setState ( prevState => {
+      return {
+        invitees: prevState.invitees.filter(i => i.id !== id)
+      };
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -60,6 +68,7 @@ class App extends Component {
             <Invitees 
             name={invitee.name}
             id={invitee.id}
+            removePerson = {this.handleRemovePerson}
           />
           )}
         </div>
