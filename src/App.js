@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './normalize.css';
 import './main.css';
 import Header from './Header';
 import FilterLists from './FilterLists';
@@ -9,9 +10,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header/>
-         <h1 className="app-name">Instant Invite</h1>
-         <AddPerson />
+        <div className="jumbotron">
+          <Header/>
+          <h1 className="app-name"><span>Instant</span> Invite</h1>
+          <AddPerson />
+          </div>
          <FilterLists />
          <Invitees />
       </div>

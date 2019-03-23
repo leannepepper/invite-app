@@ -1,3 +1,129 @@
+
+.App {
+    width: 100%; 
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .app-name {
-    color: blue; 
+   font-size: 40px; 
+   text-align: center;
+   color:rgb(70, 70, 70);
+   margin: 80px 0;
+}
+.app-name span {
+    font-style: italic;
+}
+
+.add-person {
+    text-align: center;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.header-name {
+    margin-left: 15px;
+    color:rgb(70, 70, 70);
+}
+.header-name span {
+    font-style: italic;
+}
+.jumbotron {
+    background-image: url(../src/img/unsplash-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.sign-up-buttons {
+    margin: auto 0;
+    border: none;  
+    margin-right: 15px;
+}
+
+.sign-up-buttons button {
+    border: 1px solid transparent;
+    padding: 5px;
+  
+}
+
+.sign-in {
+    color:  rgb(252, 144, 56); 
+    background-color: rgba(255, 255, 255, 0.7);  
+}
+
+.sign-up {
+    background-color: rgb(252, 144, 56);
+    color: white;
+}
+
+.add-input {
+    padding: 8px;
+    border-radius: 5px;
+    width: 40%;
+    border-style: hidden;
+    
+}
+.add-button {
+   padding: 8px 10px; 
+   border-radius: 5px;
+   margin-left: 5px;
+   background-color: rgb(252, 144, 56); 
+   color: white;
+}
+.add-button:hover {
+    box-shadow: 2px 2px 10px #fff;
+}
+.fliter-list {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.fliter-list li {
+    display: inline-block;
+    font-size: 18px;
+}
+.fliter-list li button {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: rgb(252, 144, 56);
+    transition: all ease 0.5s;
+}
+.fliter-list li button:hover {
+    color: white;
+    box-shadow: inset 200px 0 0 0 rgb(252, 144, 56);
+}
+.invitees-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    border: 1px solid darkgray;
+    box-shadow: 2px 2px 5px darkgray;
+    width: 23%;
+    height: 23%;
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.name-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.invitee-name {
+    margin: 0;
+}
+.edit-button {
+    border: none;
+    font-size: 12px;
+    color: darkgray;
+}
+.response {
+    display: flex;
+    justify-content: space-between;
+    
 }

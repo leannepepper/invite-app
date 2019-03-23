@@ -2,10 +2,10 @@ import React from 'react';
 
 const FilterLists= () => {
     return (
-        <ul>
-            <li><button>Show All Invited Guests</button></li>
-            <li><button>Show All RSVP: Yes Guests</button></li>
-            <li><button>Show All RSVP: No Guests</button></li>
+        <ul className="fliter-list">
+            <li><button>Show Invited</button></li>
+            <li><button>Show RSVP: Yes</button></li>
+            <li><button>Show RSVP: No</button></li>
         </ul>
     );
 }

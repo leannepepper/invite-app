@@ -2,9 +2,9 @@ import React from 'react';
 
 const AddPerson = () => {
     return (
-        <div>
-            <input type="text" placeholder="Invite Another Person"/>
-            <button>Invite!</button>
+        <div className="add-person">
+            <input className="add-input" type="text" placeholder="Invite Another Person"/>
+            <button className="add-button" >Invite!</button>
         </div>
     )
 }

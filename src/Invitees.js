@@ -4,13 +4,41 @@ const Invitees = () => {
     return (
         <div className="invitees-wrapper">
             <div className="card">
-                <h3 className="invitee-name">Name</h3>
-                <button>Edit</button>
+                <div className="name-wrapper">
+                    <h3 className="invitee-name">Travis Gester </h3>
+                    <button className="edit-button">Edit</button>
+                </div>
                 <div className="response">
                     <h4>RSVP:</h4>
-                    <input type="checkbox" id="response-yes"/>
+                    <input type="radio" id="response-yes"/>
                     <label for="response-yes">Yes</label>
-                    <input type="checkbox" id="response-no"/>
+                    <input type="radio" id="response-no"/>
+                    <label for="response-no">No</label>
+                </div>
+            </div>
+            <div className="card">
+                <div className="name-wrapper">
+                    <h3 className="invitee-name">Lauren Baker</h3>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="response">
+                    <h4>RSVP:</h4>
+                    <input type="radio" id="response-yes"/>
+                    <label for="response-yes">Yes</label>
+                    <input type="radio" id="response-no"/>
+                    <label for="response-no">No</label>
+                </div>
+            </div>
+            <div className="card">
+                <div className="name-wrapper">
+                    <h3 className="invitee-name">Rachel Lara </h3>
+                    <button className="edit-button">Edit</button>
+                </div>
+                <div className="response">
+                    <h4>RSVP:</h4>
+                    <input type="radio" id="response-yes"/>
+                    <label for="response-yes">Yes</label>
+                    <input type="radio" id="response-no"/>
                     <label for="response-no">No</label>
                 </div>
             </div>
