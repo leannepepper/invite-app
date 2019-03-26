@@ -14,7 +14,7 @@ const GuestList = props => (
           handleConfirmation={() => props.toggleConfirmation(index)}
           isEditing={guest.isEditing}
           handleEditing={() => props.toggleEditing(index)}
-          removePerson={() => props.removePerson(id)}
+          handleRemovePerson={() => props.handleRemovePerson(index)}
           setName={text => props.setNameAt(text, index)}
         />
       ))}

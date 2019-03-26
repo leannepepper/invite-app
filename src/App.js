@@ -76,11 +76,14 @@ class App extends Component {
     });
   };
 
-  handleRemovePerson = id => {
-    this.setState(prevState => {
-      return {
-        guests: prevState.guests.filter(i => i.id !== id)
-      };
+  // In this handler we are using slice and the spread operator to return a new array with every guest before
+  // the one we want to remove and then every guest after the one we want to remove
+  handleRemovePerson = index => {
+    this.setState({
+      guests: [
+        ...this.state.guests.slice(0, index),
+        ...this.state.guests.slice(index + 1)
+      ]
     });
   };
 
@@ -94,19 +97,22 @@ class App extends Component {
           </h1>
           <AddPerson addPerson={this.handleAddPerson} />
         </div>
-        <FilterLists
-          isFiltered={this.state.isFiltered}
-          toggleFilter={this.toggleFilter}
-        />
-        <div className="invitees-wrapper">
-          <GuestList
-            guests={this.state.guests}
-            removePerson={this.handleRemovePerson}
-            toggleConfirmation={this.toggleConfirmation}
-            toggleEditing={this.toggleEditing}
-            setNameAt={this.setNameAt}
+        <div className="guest-container">
+          <h2>{this.state.isFiltered ? "Attending" : "Invited"}</h2>
+          <FilterLists
             isFiltered={this.state.isFiltered}
+            toggleFilter={this.toggleFilter}
           />
+          <div className="invitees-wrapper">
+            <GuestList
+              guests={this.state.guests}
+              handleRemovePerson={this.handleRemovePerson}
+              toggleConfirmation={this.toggleConfirmation}
+              toggleEditing={this.toggleEditing}
+              setNameAt={this.setNameAt}
+              isFiltered={this.state.isFiltered}
+            />
+          </div>
         </div>
       </div>
     );

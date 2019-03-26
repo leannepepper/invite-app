@@ -23,7 +23,7 @@ const Guest = props => (
     </button>
     <button
       className="remove-button"
-      onClick={() => props.removePerson(props.id)}
+      onClick={() => props.handleRemovePerson(props.index)}
     >
       remove
     </button>
