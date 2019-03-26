@@ -1,12 +1,15 @@
-import React from 'react'; 
+import React from "react";
 
-const FilterLists= () => {
-    return (
-        <ul className="fliter-list">
-            <li><button>Show Invited</button></li>
-            <li><button>Show RSVP: Yes</button></li>
-            <li><button>Show RSVP: No</button></li>
-        </ul>
-    );
-}
-export default FilterLists; 
+const FilterLists = props => {
+  return (
+    <label className="fliter-list">
+      <input
+        type="checkbox"
+        onChange={props.toggleFilter}
+        checked={props.isFiltered}
+      />
+      Hide those who haven't responded
+    </label>
+  );
+};
+export default FilterLists;
